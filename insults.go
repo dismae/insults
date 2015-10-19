@@ -17,7 +17,7 @@ type InsultList struct {
 
 //RandInsult takes an InsultList and generates an insult.
 func RandInsult(l InsultList) string {
-	return fmt.Sprintf("%v %v %v %v!", l.You, l.Column1, l.Column2, l.Column3)
+	return fmt.Sprintf("%v %v %v %v!", l.You, l.Column1[rand.Intn(len(l.Column1))], l.Column2[rand.Intn(len(l.Column2))], l.Column3[rand.Intn(len(l.Column3))])
 }
 func init() {
 	rand.Seed(time.Now().UnixNano())
