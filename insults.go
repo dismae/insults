@@ -11,13 +11,13 @@ import (
 //you should be the word that would appear at the beginning of the sentence,
 //ie Thou for the shakespeaerean list.
 type InsultList struct {
-	column1, column2, column3 []string
-	you                       string
+	Column1, Column2, Column3 []string
+	You                       string
 }
 
 //RandInsult takes an InsultList and generates an insult.
 func RandInsult(l InsultList) string {
-	return fmt.Sprintf("%v %v %v %v!", l.you, l.column1, l.column2, l.column3)
+	return fmt.Sprintf("%v %v %v %v!", l.You, l.Column1, l.Column2, l.Column3)
 }
 func init() {
 	rand.Seed(time.Now().UnixNano())
