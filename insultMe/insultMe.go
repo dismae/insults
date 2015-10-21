@@ -14,5 +14,5 @@ var shakespearean = insults.InsultList{
 }
 
 func main() {
-	fmt.Println(insults.RandInsult(shakespearean))
+	fmt.Println(shakespearean.RandInsult())
 }
